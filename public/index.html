@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Activation</title>
+  <link rel='stylesheet prefetch' href='./css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='./css/bootstrap-theme.min.css'>
+  <link rel='stylesheet prefetch' href='./css/bootstrapValidator.min.css'>
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+<form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Xfinity Activation</legend>
+
+<!-- Acc No-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Account Number</label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <input  name="first_name" placeholder="Account Number" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Tel no-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Telephone</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <input name="last_name" placeholder="Telephone" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button id="act-button" class="btn btn-warning" >Start Activation</button>
+  </div>
+</div>
+
+<div id="api_calls" style="display:none">
+<!-- Validating glass-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Validating Account</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <!-- <i src="./images/In_progress_icon.png" class="glyphicon glyphicon-home"></i> -->
+        <i id="glassSpinner" class="fa fa-spinner fa-spin" style="font-size:24px;color: darkorange;"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Services order-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Fetching services and devices</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <i id="prdSpinner" class="fa fa-spinner fa-spin" style="font-size:24px;color: darkorange;"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Activate-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Activation in progress</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <i id="actSpinner" class="fa fa-spinner fa-spin" style="font-size:24px;color: darkorange;"></i>
+    </div>
+</div>
+</div>
+
+<!-- Reset -->
+<div class="form-group">
+  <label class="col-md-4 control-label">Reset devices and post activation</label>
+   <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <i id="resetSpinner" class="fa fa-spinner fa-spin" style="font-size:24px;color: darkorange;"></i>
+    </div>
+  </div>
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+</div><!-- /.container -->
+  <script src="/js/libs/jquery-3.1.1.min.js"></script>
+  <script src="/js/libs/jquery.min.js"></script>
+  <script src='/js/libs/bootstrap.min.js'></script>
+  <script src='/js/libs/bootstrapvalidator.min.js'></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+</html>
